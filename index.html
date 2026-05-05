@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Guess the Number</h1>
+        <p class="text">Guess a number from 1 to 100</p>
+        <div class="inputs">
+          <input
+            type="number"
+            id="guessInput"
+            min="1"
+            max="100"
+            onkeypress="handleKeyPress(event)"
+          />
+          <button onclick="checkNumber()" class="button-check">Check</button>
+        </div>
+        <div class="result">
+          <p id="message" class="answer"></p>
+          <p id="hint" class="help"></p>
+        </div>
+        <div class="counter">
+          <p>Attempts: <span id="attempts">0</span></p>
+        </div>
+        <button onclick="resetGame()" class="button-reset">Play Again</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
